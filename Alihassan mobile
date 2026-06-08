@@ -1,1 +1,419 @@
+<!DOCTYPE html>
 
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Reviews | Ali Hassan Mobile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "secondary-fixed-dim": "#bec6e0",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#00174b",
+                "on-tertiary": "#ffffff",
+                "on-surface": "#0b1c30",
+                "on-background": "#0b1c30",
+                "inverse-primary": "#b4c5ff",
+                "secondary": "#565e74",
+                "primary-fixed": "#dbe1ff",
+                "surface-bright": "#f8f9ff",
+                "primary": "#004ac6",
+                "surface": "#f8f9ff",
+                "tertiary-container": "#666f74",
+                "on-tertiary-container": "#e9f2f8",
+                "surface-container-low": "#eff4ff",
+                "on-primary-container": "#eeefff",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#dae2fd",
+                "primary-container": "#2563eb",
+                "on-secondary-fixed": "#131b2e",
+                "primary-fixed-dim": "#b4c5ff",
+                "on-tertiary-fixed-variant": "#3f484d",
+                "surface-container": "#e5eeff",
+                "tertiary": "#4e565b",
+                "on-surface-variant": "#434655",
+                "outline": "#737686",
+                "surface-dim": "#cbdbf5",
+                "on-primary": "#ffffff",
+                "inverse-on-surface": "#eaf1ff",
+                "inverse-surface": "#213145",
+                "on-primary-fixed-variant": "#003ea8",
+                "surface-variant": "#d3e4fe",
+                "background": "#f8f9ff",
+                "error-container": "#ffdad6",
+                "tertiary-fixed": "#dbe4ea",
+                "outline-variant": "#c3c6d7",
+                "error": "#ba1a1a",
+                "surface-container-high": "#dce9ff",
+                "tertiary-fixed-dim": "#bfc8ce",
+                "surface-container-highest": "#d3e4fe",
+                "on-secondary-container": "#5c647a",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary-fixed-variant": "#3f465c",
+                "surface-tint": "#0053db",
+                "on-tertiary-fixed": "#141d21",
+                "secondary-container": "#dae2fd",
+                "on-error": "#ffffff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "md": "16px",
+                "lg": "24px",
+                "margin-desktop": "64px",
+                "sm": "8px",
+                "xs": "4px",
+                "xl": "32px",
+                "max-width": "1280px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "base": "4px"
+        },
+        "fontFamily": {
+                "body-sm": ["Inter"],
+                "display-lg-mobile": ["Hanken Grotesk"],
+                "body-md": ["Inter"],
+                "display-lg": ["Hanken Grotesk"],
+                "label-md": ["Geist"],
+                "headline-md": ["Hanken Grotesk"],
+                "body-lg": ["Inter"],
+                "headline-sm": ["Hanken Grotesk"],
+                "code-sm": ["Geist"]
+        },
+        "fontSize": {
+                "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "label-md": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "code-sm": ["13px", {"lineHeight": "18px", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .star-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 74, 198, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface shadow-sm sticky top-0 z-50">
+<div class="flex justify-between items-center px-margin-desktop h-20 max-w-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-extrabold text-primary">
+                Ali Hassan Mobile
+            </div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Smartphones</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Accessories</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Repair</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Offers</a>
+<a class="font-label-md text-label-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Reviews</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined text-primary hover:scale-95 transition-transform" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined text-primary hover:scale-95 transition-transform" data-icon="person">person</button>
+<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+</div>
+</div>
+</header>
+<main class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero & Stats Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-xl items-center">
+<div class="lg:col-span-7">
+<h1 class="font-display-lg text-display-lg mb-sm">The Voice of Our Customers</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-md">
+                    Join over 10,000 satisfied tech enthusiasts in Gujrat who trust Ali Hassan Mobile for premium smartphones and expert repairs.
+                </p>
+<div class="flex flex-wrap gap-md items-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-4 rounded-xl hover:bg-on-primary-fixed-variant transition-all shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+                        Submit a Review
+                    </button>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface-container rounded-full border border-primary/10">
+<img alt="Google" class="w-5 h-5" data-alt="Google G logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkTjm1u8Sf1pDkm4U5OomInCzrgdJaVdnZEzC7dQgqT4Xq1CuMU8NU86R7jvygMPVe-ecnYwBGhEVWqD7HoOWLdTr8LGGT7-IUZ0KGiWKZibk8UODtlWq0y5hEN-UFvGvOHm5FcZCqc2eImqbzcfHRnru4zBi4DBCkdl7WZ1XY7K1Ff2_aOB09JpsPlTEvXL_rbPvBORzPWIX_rlrb00GthZc8QzkG_HrbZZh0eYXbLcE46b8RsyUDN6GGq8KRd0XH1rgMokVZe1Fc"/>
+<span class="font-label-md text-label-md">4.9/5 on Google Reviews</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant">
+<div class="text-primary font-display-lg text-headline-md">98%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant opacity-70">Satisfaction Rate</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant">
+<div class="text-primary font-display-lg text-headline-md">15k+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant opacity-70">Devices Sold</div>
+</div>
+<div class="bg-surface-container-low p-md rounded-xl border border-outline-variant col-span-2 flex justify-between items-center">
+<div>
+<div class="text-primary font-headline-md text-headline-md">Verified Expert</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Authorized Repair Center</div>
+</div>
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+</section>
+<!-- Filter & Sorting -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-md gap-4">
+<div class="flex gap-2 overflow-x-auto pb-2 w-full md:w-auto">
+<button class="px-4 py-2 bg-primary text-on-primary rounded-full font-label-md text-label-md">All Reviews</button>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Smartphones</button>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Repair Services</button>
+<button class="px-4 py-2 bg-surface-container hover:bg-surface-container-high rounded-full font-label-md text-label-md transition-colors">Accessories</button>
+</div>
+<div class="flex items-center gap-2 border border-outline-variant rounded-lg px-3 py-2 bg-surface">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="sort">sort</span>
+<select class="bg-transparent border-none focus:ring-0 font-label-md text-label-md text-on-surface">
+<option>Most Recent</option>
+<option>Highest Rated</option>
+<option>Most Helpful</option>
+</select>
+</div>
+</div>
+<!-- Reviews Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Review 1: Large Featured -->
+<div class="lg:col-span-2 glass-card p-lg rounded-xl shadow-sm flex flex-col justify-between border-t-4 border-t-primary">
+<div>
+<div class="flex justify-between items-start mb-md">
+<div class="flex items-center gap-md">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-primary-container">
+<img alt="User" data-alt="Professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0jYLBW1OTR3FqRRUsRacHMNf26y6zr0Xyx0g1Ywl30dgtD1WcHiVN0Drx4cOKwtFzivZnwZcSs_T-scuQZE02LW6NMGDgqmY81iatjF_q_qCoQY-pUaCEJ-H1OE2LJLlhnUtfwCAY8QYdCOGPH9D-0LvXwNN1q_-j1wSrq7ylWX6QfKS3QVYMqZe9lhMxZZfOcwrcDRoqtKFYk98KTlaQeyqhlJh7o29RJneZceQJX0hBIlfS0LMZWFCSwnzfk6Us11J6LJgECQ5z"/>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm flex items-center gap-2">
+                                    Hamza Siddiqui
+                                    <span class="material-symbols-outlined text-primary text-lg star-fill" data-icon="verified">verified</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Verified Buyer • iPhone 15 Pro Max</div>
+</div>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+</div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface mb-md italic">
+                        "The service at Ali Hassan Mobile is unmatched in Gujrat. I was looking for the titanium 15 Pro Max, and they not only had it in stock but also helped me transfer all my data seamlessly. Their transparency about pricing and warranty is what makes them the best."
+                    </p>
+</div>
+<div class="flex items-center gap-4 pt-md border-t border-outline-variant">
+<button class="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="thumb_up">thumb_up</span> Helpful (24)
+                    </button>
+<span class="text-outline-variant">|</span>
+<span class="font-label-md text-label-md text-outline">Posted 2 days ago</span>
+</div>
+</div>
+<!-- Review 2: Standard Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="flex justify-between mb-sm">
+<div class="flex text-primary scale-75 origin-left">
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+</div>
+<img alt="Google" class="h-4 opacity-50" data-alt="Google G icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBba4Wi8Wkac3tKtqQo4kSDqDf8sWMl07zp8qm04zUZfWqOnkwFRikIP89W1MOKQXumxpCjm3fgW8Y21APYwf6JLaeYe_tmRT3eZOORDC0zX1UOLXBm0k3fNacaNtQL9s5kjzvOgQ4_RgmceWAS6BMOG1Lcsq8vL8J-LROi08ZtIEwy_b2m4JeqQ-crLK-1yMJhPT144Gp0KIG05b4j1gJ7dv9ek0bu1Wr55H8zsro50ESgDxgzQoPNZmWGG8MZ2aXLOYz-rF0nbc6L"/>
+</div>
+<h3 class="font-label-md text-label-md mb-2">Zainab Malik</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    "Got my S23 Ultra screen replaced here. Fast service and they used original parts. Highly recommended for repairs!"
+                </p>
+<div class="mt-md flex items-center justify-between">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase">Verified Repair</span>
+<span class="font-label-md text-label-md text-outline">1 week ago</span>
+</div>
+</div>
+<!-- Review 3: Standard Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="flex justify-between mb-sm">
+<div class="flex text-primary scale-75 origin-left">
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined" data-icon="star">star</span>
+</div>
+</div>
+<h3 class="font-label-md text-label-md mb-2">Ali Raza</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    "Best place for accessories. Got original Sony headphones at a great price. Only wish they had more color options in stock."
+                </p>
+<div class="mt-md flex items-center justify-between">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase">Verified Purchase</span>
+<span class="font-label-md text-label-md text-outline">3 weeks ago</span>
+</div>
+</div>
+<!-- Review 4: Standard Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="flex justify-between mb-sm">
+<div class="flex text-primary scale-75 origin-left">
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+</div>
+</div>
+<h3 class="font-label-md text-label-md mb-2">Fatima Noor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    "The installment plans offered are very helpful. Managed to get my dream phone without breaking the bank. Staff is very polite."
+                </p>
+<div class="mt-md flex items-center justify-between">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase">Verified Purchase</span>
+<span class="font-label-md text-label-md text-outline">1 month ago</span>
+</div>
+</div>
+<!-- Review 5: Standard Card -->
+<div class="bg-surface-container-lowest p-md rounded-xl border border-outline-variant shadow-sm flex flex-col">
+<div class="flex justify-between mb-sm">
+<div class="flex text-primary scale-75 origin-left">
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+</div>
+</div>
+<h3 class="font-label-md text-label-md mb-2">Omar Farooq</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                    "I travel from Lalamusa just for their repair services. They are the only ones I trust with high-end tech. Precision work!"
+                </p>
+<div class="mt-md flex items-center justify-between">
+<span class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold uppercase">Verified Repair</span>
+<span class="font-label-md text-label-md text-outline">1 month ago</span>
+</div>
+</div>
+<!-- Review 6: Image Focused Review -->
+<div class="lg:col-span-2 relative group overflow-hidden rounded-xl bg-primary h-[300px]">
+<img alt="Review Image" class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="Store interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD99v1hon4_OdOXXswcbrErB4_zunvnPMUZ0aIUv_-sRMTm6d21O4ak94iE5qBedmpbSMK3kf8o2Ulq-20J5j_G_WA6SpdEzq64BeizWGwZDrsL4dLenDfyYjggX_PY7n51ZyOPl9BUq_BaxJ_Xv-uAURGW532mSARRLB05v_qtE0LXioWkIMmrBquFQ5VqHWJN9P1Z8Ww-qHW5xWAihx2i1MMm0RTeFH_G3x4Zj3ugowp7x5bqWH2n_5a3d-inshWmUWPFPiWnREt5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg text-white">
+<div class="flex text-white/90 mb-2">
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+<span class="material-symbols-outlined star-fill" data-icon="star">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md">"The Digital Flagship of Gujrat"</h3>
+<p class="font-label-md text-label-md text-surface-variant/80 mt-2">— Bilal Akram, Local Guide</p>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="mt-xl text-center">
+<button class="px-8 py-3 border-2 border-primary text-primary rounded-full font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all">
+                Load More Reviews
+            </button>
+</div>
+</main>
+<!-- Google Review CTA Floating -->
+<div class="fixed bottom-8 left-8 hidden md:block z-50">
+<div class="glass-card p-4 rounded-xl shadow-xl border border-primary/20 flex items-center gap-4">
+<img alt="Google" class="w-8" data-alt="Google logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA42tFuRWARohmtIgVRV0NS8xKuE3kfVDG_mjNOiMvLVH3K_yPYj3gczEw1R3xWRJnEGtolxXGt1oOXB7xZKyRcn-r_mVBpE-YwH1jJc8uKNx_x9mn1wDchOySoAThytSfYnFcwzv5dFkDfzGERyaYWFdy7TQFjmX4E9h66ULw5kKZhCxpgAZ49zAP3WrbQMFDopWur8YGsnbtb3bmc3ng0zTudFsTxvAh7uRZUr3MjLPL5FFnDooEcCxADJ32nBPTXQQWmyGzq7jdP"/>
+<div>
+<div class="font-label-md text-label-md font-bold text-primary">Review us on Google</div>
+<div class="text-[10px] text-on-surface-variant uppercase font-medium">Get 5% off accessories</div>
+</div>
+<a class="bg-primary text-on-primary p-2 rounded-lg hover:scale-110 transition-transform shadow-sm" href="#">
+<span class="material-symbols-outlined" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- WhatsApp Floating Action Button -->
+<a class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-50 flex items-center justify-center" href="https://wa.me/923000000000">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.483 8.413-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.215-3.579c1.511.895 3.162 1.368 4.843 1.368 5.399 0 9.792-4.393 9.795-9.792.001-2.618-1.018-5.08-2.871-6.932-1.854-1.854-4.314-2.873-6.932-2.873-5.399 0-9.791 4.392-9.794 9.792-.001 1.83.513 3.61 1.488 5.16l-.988 3.606 3.693-.969zM17.208 14.161c-.302-.15-1.785-.88-2.062-.98s-.478-.15-.678.15-.778.98-.953 1.18-.352.225-.653.075c-.302-.15-1.274-.469-2.427-1.496-.897-.8-1.502-1.788-1.678-2.088s-.019-.462.131-.612c.135-.135.302-.351.453-.526s.201-.299.301-.499.05-.375-.025-.526c-.075-.15-.678-1.631-.93-2.24-.245-.595-.494-.514-.678-.523s-.377-.011-.577-.011-.528.075-.804.375c-.276.3-.1.1.75 1.054 1.255 1.054 1.631 2.28 1.631 4.215 0 1.935-.15 3.385-.375 3.935-.225.55-.453.856-.703 1.107-.3.3-.653.475-1.054.475s-1.355-.3-2.131-.475c-.776-.175-1.656-.475-2.031-.625s-.628-.275-.853-.475c-.225-.2-.553-.526-.828-.853-.275-.326-.453-.628-.628-.853s-.275-.3-.427-.475-.3-.375-.3-.526.075-.3.15-.475.225-.375.375-.526.3-.3.453-.451z"></path></svg>
+</a>
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-extrabold text-primary mb-4">
+                    Ali Hassan Mobile
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Gujrat's most trusted smartphone store since 2012. Premium quality, original products.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">Shipping Info</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">Warranty Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-4">Legal</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:underline hover:text-primary" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-4">Visit Us</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Main Bazaar, Gujrat, Pakistan<br/>
+                    Phone: +92 300 0000000<br/>
+                    Email: info@alihassanmobile.com
+                </p>
+</div>
+</div>
+<div class="border-t border-outline-variant py-6 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Ali Hassan Mobile Store Gujrat. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => el.classList.add('scale-95'));
+            el.addEventListener('mouseup', () => el.classList.remove('scale-95'));
+            el.addEventListener('mouseleave', () => el.classList.remove('scale-95'));
+        });
+
+        // Floating elements entry animation
+        window.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.glass-card, .bg-surface-container-lowest');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.5s ease-out';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body></html>
